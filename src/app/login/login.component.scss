@@ -1,13 +1,10 @@
-@import '../colors.scss';
-
-.background-green1 {
-    background: $green1;
-}
+@import '../../colors.scss';
 
 .content-infor {
     section {
         height: 65vh;
         padding: 45px 0;
+        min-height: 460px;
         h1, h3 {
             font-size: 32px;
             color: $green2;
@@ -29,6 +26,107 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+}
+
+.content-form{
+    .register{
+        height: 30vh;
+        padding: 10vh 100px;
+        text-align: right;
+        font-size: 16px;
+        p{
+            span{
+                color: $gray1;
+                margin-right: 10px;
+            }
+            a{
+                color: $green1;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .form{
+        height: 65vh;
+        h2{
+            color: $green1;
+            font-size: 23px;
+            margin-bottom: 30px;
+        }
+        form{
+            label{
+                font-size: 14px;
+                color: $gray1;
+                margin-bottom: 10px;
+            }
+            .style-input{
+                border: 1px solid $gray3;
+                border-radius: 3px;
+                min-height: 45px;
+                position: relative;
+                background: $white1;
+                margin-bottom: 15px;
+                input{
+                    width: 100%;
+                    min-height: 45px;
+                    border-radius: 3px;
+                    padding: 10px;
+                }
+                i{
+                    position: absolute;
+                    height: 45px;
+                    width: 45px;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .content-checkbox{
+                label{
+                    color:$green3;
+                    font-size: 14px;
+                    cursor: pointer;
+                    padding-left: 20px;
+                    position: relative;
+                }
+                label::before{
+                    content: '';
+                    border: 1px solid $gray4;
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                    background: $white1;
+                }
+                input[type="checkbox"]{
+                    display: none;
+                }
+                input[type="checkbox"]:checked + label::before{
+                    background: $green3;
+                    border: 1px solid $green3;
+                }
+            }
+            .options{
+                button{
+                    display: block;
+                    background: $green4;
+                    min-width: 330px;
+                    height: 45px;
+                    border-radius: 100px;
+                    color: $white1;
+                    margin: 30px auto;
+                }
+                a{
+                    display: block;
+                    color: $green4;
+                    text-align: center;
+                }
+            }
         }
     }
 }
