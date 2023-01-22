@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3 no-padding" *ngIf="!(statusMenu$ | async)">
+        <div class="col-md-3 no-padding " [ngClass]="!(statusMenu$ | async) ? 'menu-responsive':'menu-responsive active'" >
             <app-sidebar></app-sidebar>
         </div>
-        <div class=" no-padding" [ngClass]="!(statusMenu$ | async) ? 'col-md-9':'col-md-12'">
+        <div class="col-sm-12 no-padding" [ngClass]="!(statusMenu$ | async) ? 'col-md-9':'col-md-12'">
             <app-nav></app-nav>
             <div class="background-gray1 height-all" [ngClass]="!(statusMenu$ | async) ? 'container':'container-fluid'">
                 <app-table></app-table>

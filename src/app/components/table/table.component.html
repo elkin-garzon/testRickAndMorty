@@ -13,18 +13,18 @@
     </div>
     <form [formGroup]="formSearch">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 margin">
                 <label for="">nombre</label>
                 <input type="text" name="name" id="name" formControlName="name" autocomplete="off">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 margin">
                 <label for="">tipo de personaje</label>
                 <input type="text" name="species" id="species" formControlName="species" autocomplete="off">
             </div>
         </div>
         <br>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 btn-options">
                 <button (click)="reset()">limpiar filtros</button>
                 <button (click)="searchResults()">buscar</button>
             </div>

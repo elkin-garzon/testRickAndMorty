@@ -7,6 +7,9 @@ aside{
         text-align: center;
         max-height: 45px;
         height: 45px;
+        .menu-inter{
+            display: none;
+        }
     }
     .profile{
         min-height: 242px;
@@ -58,6 +61,16 @@ aside{
     }
 }
 
-@media screen and (max-width: 850px) {
-
+@media screen and (max-width: 660px) {
+    .image{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        .menu-inter{
+            display: block !important;
+            font-size: 30px;
+            color: $white1;
+        }
+    }
+    
 }
