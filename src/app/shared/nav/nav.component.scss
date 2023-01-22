@@ -1,24 +1,21 @@
 @import '../../../colors.scss';
 
-nav{
-    height: 50px;
-    max-height: 65px;
+nav {
+    height: 45px;
+    max-height: 45px;
     display: flex;
     align-items: center;
-    figure{
-        text-align: center;
+    color: $white1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    p {
+        font-weight: bold;
     }
-    .options{
-        color: $white1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-        p{
-            font-weight: bold;
-        }
-        i{
-            font-size: 30px;
-        }
+
+    i {
+        font-size: 30px;
     }
 }

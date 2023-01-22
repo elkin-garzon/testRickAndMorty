@@ -1,0 +1,61 @@
+<div class="table-content">
+    <div class="breadcrumbs">
+        <a href="">Tarjetas Visa en dispensadores</a>
+        <span>/</span>
+        <a href="" class="active">Solicitud tarjetas</a>
+    </div>
+    <h1>
+        SOLICITUD TARJETAS
+    </h1>
+    <div class="form-search">
+        <i class="bi bi-search"></i>
+        <h4>Buscar</h4>
+    </div>
+    <form [formGroup]="formSearch">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">nombre</label>
+                <input type="text" name="name" id="name" formControlName="name" autocomplete="off">
+            </div>
+            <div class="col-md-4">
+                <label for="">tipo de personaje</label>
+                <input type="text" name="species" id="species" formControlName="species" autocomplete="off">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-8">
+                <button (click)="reset()">limpiar filtros</button>
+                <button (click)="searchResults()">buscar</button>
+            </div>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>type</th>
+                <th>species</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of rows">
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.type}}</td>
+                <td>{{row.species}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="paginator">
+        <div class="info-count">mostrando {{rows.length}} de {{info.count}}</div>
+        <div class="options-paginator">
+            <i class="bi bi-arrow-left" *ngIf="info.prev" (click)="prev()"></i>
+            <ul>
+                <li *ngFor="let page of pages" (click)="goPage(page)" [ngClass]="pageActive == page ? 'active':''">{{page}}</li>
+            </ul>
+            <i class="bi bi-arrow-right" (click)="next()"></i>
+        </div>
+    </div>
+</div>

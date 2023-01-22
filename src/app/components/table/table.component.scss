@@ -1,5 +1,124 @@
-.dashboard{
-    .table{
-        width: 75%;
+@import '../../../colors.scss';
+
+.table-content {
+    padding: 50px;
+
+    a {
+        text-decoration: none;
+        margin-right: 5px;
+        color: $gray1;
+        font-weight: bold;
+    }
+
+    a.active {
+        color: $green3;
+        margin-left: 5px;
+    }
+
+    h1 {
+        color: $green3;
+        margin: 50px 0 30px;
+    }
+
+    .form-search {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    form {
+        margin: 30px 0;
+
+        label {
+            color: $gray1;
+            text-transform: capitalize;
+        }
+
+        input {
+            border-bottom: 1px solid $green4;
+            width: 100%;
+        }
+
+        button {
+            background: $green4;
+            color: $white1;
+            margin-right: 30px;
+            min-width: 200px;
+            padding: 5px;
+            border-radius: 2px;
+            border: 1px solid $green4;
+        }
+
+        button:hover {
+            background: $white1;
+            color: $green4;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 30px;
+
+        thead {
+            background: $green4;
+            color: $white1;
+
+            th {
+                padding: 10px;
+            }
+        }
+
+        tbody {
+            background: $white1;
+
+            tr {
+                border-bottom: 1px solid $gray5;
+
+                td {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .paginator {
+        background: $white1;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info-count {
+            color: $gray4;
+        }
+
+        .options-paginator {
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 24px;
+                margin: 0 15px;
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    width: 25px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                li.active {
+                    background: $green4;
+                    color: $white1;
+                }
+            }
+        }
+
     }
 }
