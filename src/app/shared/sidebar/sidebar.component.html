@@ -1,0 +1,27 @@
+<aside>
+    <section class="profile">
+        <div class="photo"></div>
+        <p>
+            <i class="bi bi-lock-fill"></i>
+            <span>Jeff</span>
+        </p>
+    </section>
+    <section class="list-items">
+        <ul>
+            <li>
+                <a (click)="activeLink(1)" [ngClass]="active == 1 ? 'active':''">Tarjetas Visa en dispensadores</a>
+                <ul class="sub-menu" [ngClass]="active == 1 ? 'active':''">
+                    <li>
+                        <a>Crear dispensador</a>
+                    </li>
+                    <li>
+                        <a>Monitorear y editar dispensadores</a>
+                    </li>
+                    <li>
+                        <a>Solicitud tarjetas</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>

@@ -1,0 +1,55 @@
+@import '../../../colors.scss';
+
+aside{
+    height: 100vh;
+    box-shadow: 0px 3px 6px #00000029;
+    width: 25%;
+    .profile{
+        min-height: 242px;
+        border-bottom: 1px solid $gray3;
+        padding: 15px;
+        .photo{
+            width: 150px;
+            height: 150px;
+            background: #D1FBD9;
+            border-radius: 50%;
+            margin: 0 auto;
+            
+        }
+        p{
+            color: $green3;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    .list-items{
+        ul{
+            li{
+                display: block;
+                background: $white1;
+                a{
+                    color: $green3;
+                    min-height: 40px;
+                    cursor: pointer;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                }
+                a:hover{
+                    background: $gray5;
+                }
+                a.active{
+                    background: $green3;
+                    color: $white1;
+                }
+                .sub-menu{
+                    display: none;
+                }
+                .sub-menu.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
-@import '../../colors.scss';
 
+@import '../../../colors.scss';
 .content-infor {
     section {
         height: 65vh;
@@ -120,6 +120,9 @@
                     border-radius: 100px;
                     color: $white1;
                     margin: 30px auto;
+                }
+                button:disabled{
+                    background: $gray5;
                 }
                 a{
                     display: block;

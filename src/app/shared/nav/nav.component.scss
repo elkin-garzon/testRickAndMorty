@@ -1,0 +1,24 @@
+@import '../../../colors.scss';
+
+nav{
+    height: 50px;
+    max-height: 65px;
+    display: flex;
+    align-items: center;
+    figure{
+        text-align: center;
+    }
+    .options{
+        color: $white1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        p{
+            font-weight: bold;
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+}

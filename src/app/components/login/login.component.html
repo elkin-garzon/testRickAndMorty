@@ -25,34 +25,33 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h2>Iniciar sesión en Coink</h2>
-                        <form>
+                        <form [formGroup]="formLogin">
                             <div>
                                 <label for="">Correo electrónico</label>
                                 <div class="style-input">
-                                    <input type="text">
+                                    <input type="email" name="mail" id="mail" formControlName="mail" autocomplete="off">
                                     <i class="bi bi-person"></i>
-                                </div>  
+                                </div>
                             </div>
                             <div>
                                 <label for="">Contraseña</label>
                                 <div class="style-input">
-                                    <input type="password">
-                                    <i class="bi bi-eye" (click)="viewPass()"></i>
-                                </div>  
+                                    <input [type]="changeType? 'text': 'password'" name="password" id="password" formControlName="password">
+                                    <i class="bi bi-eye pointer" (click)="viewPass()" *ngIf="!changeType"></i>
+                                    <i class="bi bi-eye-fill" (click)="viewPass()" *ngIf="changeType"></i>
+                                </div>
                             </div>
                             <div class="content-checkbox">
                                 <input type="checkbox" name="remember" id="remember">
                                 <label for="remember">Recordarme</label>
                             </div>
                             <div class="options">
-                                <button>Iniciar sesión</button>
+                                <button type="button" [disabled]="!formLogin.valid" (click)="login()">Iniciar sesión</button>
                                 <a href="">¿Olvidaste tu contraseña?</a>
                             </div>
                         </form>    
                     </div>
-                    
                 </div>
-                
             </section>
         </div>
     </div>
