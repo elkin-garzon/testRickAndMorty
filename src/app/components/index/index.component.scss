@@ -5,7 +5,9 @@
 .height-all {
     min-height: 95vh;
 }
-
+.menu-responsive.active {
+    display: none !important;
+}
 @media screen and (max-width: 560px) {
     .menu-responsive {
         display: none;
