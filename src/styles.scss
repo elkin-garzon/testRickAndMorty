@@ -96,3 +96,8 @@ input {
 .pointer{
     cursor: pointer;
 }
+@media screen and (max-width: 540px) {
+    .order{
+        order: -1!important
+    }
+}
